@@ -16,9 +16,6 @@ def impute_missing_values(df, numerical_cols, categorical_cols):
 
 
 def one_hot_encode_categorical_features(df, categorical_cols):
-    """
-    One-hot encode categorical features in the DataFrame.
-    """
     df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
 
     return df
